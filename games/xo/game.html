@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./game.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="score">
+            <div>Your score: <span id="yourScore">0</span></div>
+            <div>AI score: <span id="aiScore">0</span></div>
+        </div>
+        <div class="box" id="ovBox">
+            <div class="tile" id="box1"></div>
+            <div class="tile" id="box2"></div>
+            <div class="tile" id="box3"></div>
+            <div class="tile" id="box4"></div>
+            <div class="tile" id="box5"></div>
+            <div class="tile" id="box6"></div>
+            <div class="tile" id="box7"></div>
+            <div class="tile" id="box8"></div>
+            <div class="tile" id="box9"></div>
+        </div>
+        <div class="buttons">
+            <button id="reset">
+                Reset Score
+            </button>
+            <button id="set">
+                Settings
+            </button>
+            <a href="./index.html"><button id="menu">
+                    Main Menu
+                </button></a>
+        </div>
+    </div>
+
+    <div id="confirmReset" class="confirm-box">
+        <p>Are you sure you want to reset the score?</p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
+    </div>
+
+</body>
+
+</html>

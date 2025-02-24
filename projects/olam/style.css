@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Assistant';
+}
+
+.bg {
+    background: #E5EEFF;
+    display: grid;
+    justify-content: center;
+    padding: 8%;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin-block: 300px 270px;
+    margin-inline: auto;
+}
+
+
+
+.grid {
+    background: red;
+}
+
+.grid img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#gridText {
+    grid-area: 1/1/3/3;
+    background-color: #020253;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-inline: 70px;
+}
+
+#gridForm {
+    grid-area: 4/3/7/5;
+    background: #8E097C;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-inline: 10%;
+
+}
+
+h1 {
+    color: #0EE1DA;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+h2 {
+    color: #F9F9F9;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+p {
+    color: #F9F9F9;
+    font-size: 1.5rem;
+}
+
+label {
+    color: #0EE1DA;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+form {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputs {
+    border: none;
+    height: 3rem;
+    width: 100%;
+    border-bottom: 5px solid #0EE1DA;
+
+}
+
+#txtarea {
+    height: 10.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+
+
+}
+
+.submit {
+    border: none;
+    background: #0EE1DA;
+    color: #011560;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 2%;
+}
+
+@media (max-width:768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        margin: 0;
+        gap: 20px;
+    }
+
+    #gridText {
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+
+    #txtarea {
+        height: 4.5rem;
+    }
+
+    .inputs {
+        height: 1.5rem;
+    }
+
+    #gridForm {
+        grid-area: 6/1/9/3;
+    }
+
+    .submit {
+
+        font-size: 1rem;
+        font-weight: 900;
+        padding: 2%;
+    }
+
+}

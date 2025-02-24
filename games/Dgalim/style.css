@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img {
+    height: 35%;
+}
+
+.fa {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.fa:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1.52);
+}
+
+    

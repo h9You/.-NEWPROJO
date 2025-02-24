@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../projectspreview/fonts/GreatVibes-Regular.ttf') format('truetype');
+}
+
+@media (max-width:768px) {
+
+    .projectnameContainer h1 {
+        font-size: 3rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .width {
+        width: 100% !important;
+    }
+
+    .projectnameContainer p,
+    .logo {
+        font-size: 1.2rem !important;
+        color: #3A3A3A;
+    }
+
+    .links {
+        display: none !important;
+    }
+
+    .buttons a {
+        margin-top: 10px !important;
+        padding: 5px 15px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width:460px) {
+
+    .projectnameContainer h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .width {
+        width: 100% !important;
+    }
+
+
+    .projectnameContainer p,
+    .logo {
+        font-size: 0.8rem !important;
+        color: #3A3A3A;
+    }
+
+    .links {
+        display: none !important;
+    }
+
+    .buttons a {
+        margin-top: 10px !important;
+        padding: 5px 15px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+.navbar {
+    border-top: 3px solid #ff4050;
+    height: 77px;
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    width: 50%;
+    font: normal lighter normal 25px/37px 'GreatVibes';
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-left: 3%;
+}
+
+.links {
+    width: 50%;
+    text-align: center;
+    font: normal normal bold 25px/37px sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: #2C2C2C;
+}
+
+.links a:hover {
+    color: #1AE0EC;
+    transition: 0.34s;
+    transform: scale(1.15);
+}
+
+.links a:not(:hover) {
+    transform: scale(1);
+    transition: 0.34s;
+}
+
+.width {
+    width: 50%;
+}
+
+.projectnameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #13E8F163;
+    text-align: center;
+    gap: 20px;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+.projectnameContainer h1 {
+    font: normal normal bolder 80px/118px sans-serif;
+    color: #3A3A3A;
+}
+
+.projectnameContainer p {
+    font: normal normal 600 20px/30px sans-serif;
+    color: #3A3A3A;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons a {
+    margin-top: 20px;
+    font: normal normal 600 20px/30px sans-serif;
+    padding: 5px 20px;
+    background: #1AE0EC 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #2C2C2C;
+    transition: 0.34s;
+    transition: 0.34s;
+    transition: 0.34s;
+    transition: 0.34s;
+}
+
+.buttons a:hover {
+    transition: 0.34s;
+    transform: scale(0.88);
+}
+
+.iconsrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.footer {
+    height: 40px;
+    background-color: #000000;
+    border-bottom: 3px solid #ff4050;
+    display: flex;
+    align-items: center;
+}
+
+.footTitle {
+    font: thin normal normal 20px/29px sans-serif;
+    color: #ff4050;
+    width: 50%;
+    padding-left: 0.5%;
+}
+
+.Captions {
+    text-align: right !important;
+    color: #ff4050;
+    font: thin normal 300 20px/29px sans-serif;
+    width: 50%;
+    padding-right: 0.5%;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+.imgContainer img {
+    width: 62%;
+    box-shadow: 0px 0px 40px #00000066;
+}
+
+.imgContainer img:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.imgContainer img:not(:hover) {
+    transition: 0.4s;
+}
+
+.navTitle:hover {
+    transform: translateY(0.5rem);
+    transition: 0.5s;
+}
+
+.navTitle:not(:hover) {
+    transition: 0.5s;
+}
