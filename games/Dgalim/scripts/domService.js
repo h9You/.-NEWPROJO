@@ -42,17 +42,16 @@ const generateCard = (country) => {
     cardFooter.className = "card-footer d-flex justify-content-center mb-2";
 
     let heartIcon = document.createElement('i');
-heartIcon.className = "fa fa-heart text-secondary"; // Default to gray
+heartIcon.className = "fa fa-heart text-secondary";
 
-// Check if the country is already in favorites
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 if (favorites.some(fav => fav.name.common === country.name.common)) {
-    heartIcon.classList.replace('text-secondary', 'text-danger'); // Set to red if in favorites
+    heartIcon.classList.replace('text-secondary', 'text-danger');
 }
 
 heartIcon.addEventListener('click', () => {
-    heartIcon.classList.toggle('text-secondary'); // Toggle gray
-    heartIcon.classList.toggle('text-danger'); // Toggle red
+    heartIcon.classList.toggle('text-secondary');
+    heartIcon.classList.toggle('text-danger');
     toggleFavorite(country);
 });
 
