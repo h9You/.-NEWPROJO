@@ -1,25 +1,23 @@
 import {countries, search, reset} from './countryService.js';
-const cardsContainer = document.getElementById('cards')
+const cardsContainer = document.getElementById('cards');
 
-document.getElementById('searchInput').addEventListener('input', (event)=>{
+document.getElementById('searchInput').addEventListener('input', (event) => {
     console.log(event.target.value);
-        reset();
-        cardsContainer.innerHTML = '';
-    if (!event.target.value || event.target.value === ''){
+    reset();
+    cardsContainer.innerHTML = '';
+    if (!event.target.value || event.target.value === '') {
         reset();
         createCards();
+    } else {
+        search(event.target.value);
+        createCards();
     }
-    else{
-        search(event.target.value)
-        createCards()
-    }
-
-
-})
+    displayFavorites();
+});
 
 const generateCard = (country) => {
     const card = document.createElement('div');
-    card.className = "card m-2 col-sm-12 col-md-3"
+    card.className = "card m-2 col-sm-12 col-md-3";
 
     const cardImg = document.createElement('img');
     cardImg.src = country.flags.png;
@@ -44,13 +42,20 @@ const generateCard = (country) => {
     cardFooter.className = "card-footer d-flex justify-content-center mb-2";
 
     let heartIcon = document.createElement('i');
-    heartIcon.className = "fa fa-heart text-dark";
+heartIcon.className = "fa fa-heart text-secondary"; // Default to gray
 
-    heartIcon.addEventListener('click', () =>{
-    heartIcon.classList.toggle('text-dark')
-    heartIcon.classList.toggle('text-danger')
-        
-    })
+// Check if the country is already in favorites
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+if (favorites.some(fav => fav.name.common === country.name.common)) {
+    heartIcon.classList.replace('text-secondary', 'text-danger'); // Set to red if in favorites
+}
+
+heartIcon.addEventListener('click', () => {
+    heartIcon.classList.toggle('text-secondary'); // Toggle gray
+    heartIcon.classList.toggle('text-danger'); // Toggle red
+    toggleFavorite(country);
+});
+
 
     cardFooter.appendChild(heartIcon);
 
@@ -62,14 +67,44 @@ const generateCard = (country) => {
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
 
-    const cardsContainer = document.getElementById('cards');
     cardsContainer.appendChild(card);
-}
+};
 
 const createCards = () => {
     for (const country of countries) {
         generateCard(country);
     }
-}
+};
+
+const toggleFavorite = (country) => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    if (favorites.some(fav => fav.name.common === country.name.common)) {
+        favorites = favorites.filter(fav => fav.name.common !== country.name.common);
+    } else {
+        favorites.push(country);
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+};
+
+
+const displayFavorites = () => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    for (const country of favorites) {
+        generateCard(country);
+    }
+};
+
+const updateCards = () => {
+    reset();
+    cardsContainer.innerHTML = '';
+    createCards();
+    displayFavorites();
+};
+
+window.addEventListener('load', () => {
+    updateCards();
+});
 
 export { createCards };
