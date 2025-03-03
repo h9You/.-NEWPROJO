@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./game.js" defer></script>
+    <title>Tic Tac Toe Game</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
     <div class="wrapper">
         <div class="score">
-            <div>Your score: <span id="yourScore">0</span></div>
-            <div>AI score: <span id="aiScore">0</span></div>
+            <div>You: <span id="yourScore">0</span></div>
+            <div>AI: <span id="aiScore">0</span></div>
         </div>
+
+        <div class="turn-indicator" id="turnIndicator">Your turn</div>
+
         <div class="box" id="ovBox">
             <div class="tile" id="box1"></div>
             <div class="tile" id="box2"></div>
@@ -27,25 +32,31 @@
             <div class="tile" id="box8"></div>
             <div class="tile" id="box9"></div>
         </div>
+
         <div class="buttons">
             <button id="reset">
-                Reset Score
+                <i class="fas fa-redo-alt"></i> Reset Score
             </button>
-            <button id="set">
-                Settings
-            </button>
-            <a href="./index.html"><button id="menu">
-                    Main Menu
-                </button></a>
+            <a href="./index.html#settings">
+                <button id="set">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+            </a>
+            <a href="./index.html">
+                <button id="menu">
+                    <i class="fas fa-home"></i> Main Menu
+                </button>
+            </a>
         </div>
     </div>
 
     <div id="confirmReset" class="confirm-box">
         <p>Are you sure you want to reset the score?</p>
-        <button id="confirmYes">Yes</button>
-        <button id="confirmNo">No</button>
+        <button id="confirmYes">Yes, Reset</button>
+        <button id="confirmNo">Cancel</button>
     </div>
 
+    <script src="./game.js"></script>
 </body>
 
 </html>

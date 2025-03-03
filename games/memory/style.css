@@ -166,7 +166,6 @@ h2 {
 
 
 
-/* How to Play */
 .instructions {
     margin-bottom: 20px;
 }
@@ -190,7 +189,6 @@ li {
     margin-bottom: 5px;
 }
 
-/* Responsive Styles */
 @media (max-width: 600px) {
     .menu {
         padding: 20px;
@@ -221,7 +219,6 @@ li {
     }
 }
 
-/* Animation for menu transitions */
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // DOM Elements
     const mainMenu = document.getElementById("main-menu");
     const difficultyMenu = document.getElementById("difficulty-menu");
     const settingsMenu = document.getElementById("settings-menu");
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const backFromDifficulty = document.getElementById("back-from-difficulty");
     const backFromSettings = document.getElementById("back-from-settings");
     
-    // Function to show a specific menu and hide others
     const showMenu = (menu) => {
         mainMenu.style.display = "none";
         difficultyMenu.style.display = "none";
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.style.display = "flex";
     };
     
-    // Event listeners for main menu buttons
     playBtn.addEventListener("click", () => {
         showMenu(difficultyMenu);
     });
@@ -32,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showMenu(settingsMenu);
     });
     
-    // Event listeners for back buttons
     backFromDifficulty.addEventListener("click", () => {
         showMenu(mainMenu);
     });
@@ -41,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showMenu(mainMenu);
     });
     
-    // Difficulty buttons
     easyBtn.addEventListener("click", () => {
         localStorage.setItem("memoryGameDifficulty", "easy");
         window.location.href = "game.html";
@@ -57,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "game.html";
     });
     
-    // Apply subtle animation to menu buttons
     const menuButtons = document.querySelectorAll(".menu-btn");
     menuButtons.forEach(button => {
         button.addEventListener("mouseover", () => {
