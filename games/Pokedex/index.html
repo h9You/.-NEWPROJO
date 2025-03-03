@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="pokedex.css">
+    <script src="./scripts/index.js" type="module" defer></script>
+</head>
+
+<body class="pokemon-bg">
+    <div class="pokemon-header">
+        <h1 class="text-center text-white p-4">Pokédex</h1>
+    </div>
+    <h4 class="text-center text-white">חיפוש פוקימון</h4>
+    <div class="m-auto mt-1 d-flex justify-content-center col-md-6 col-sm-12">
+        <input id="searchInput" class="form-control m-4" placeholder="הזן שם פוקימון..." />
+    </div>
+    <div id="cards" class="container d-flex flex-wrap justify-content-center"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
