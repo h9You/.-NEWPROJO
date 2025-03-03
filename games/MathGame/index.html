@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Trivia</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <i class="fas fa-layer-group"></i>
+                <span>Challenge: <span id="current-level">Beginner</span></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span>Time: <span id="time-display">00:00</span></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Correct: <span id="correct-counter">0</span>/10</span>
+            </div>
+        </div>
+
+        <main class="game-content">
+            <header class="game-header">
+                <h1><i class="fas fa-square-root-alt"></i> MathMaster</h1>
+                <p class="tagline">Challenge your mind with the power of numbers</p>
+            </header>
+
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">Question <span id="current-question">0</span> of 10</div>
+            </div>
+
+            <div class="settings-panel">
+                <div class="setting-group">
+                    <label for="number-range">Difficulty:</label>
+                    <select id="number-range" class="setting-select">
+                        <option value="10">Beginner (1-10)</option>
+                        <option value="100">Intermediate (1-100)</option>
+                        <option value="1000">Advanced (1-1000)</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label for="operation-type">Operation:</label>
+                    <select id="operation-type" class="setting-select">
+                        <option value="+">Addition (+)</option>
+                        <option value="-">Subtraction (-)</option>
+                        <option value="*">Multiplication (×)</option>
+                        <option value="/">Division (÷)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="equation">
+                    <span class="number" id="first-number">8</span>
+                    <span class="operation" id="operation-symbol">+</span>
+                    <span class="number" id="second-number">4</span>
+                    <span class="equals">=</span>
+                    <span class="question-mark">?</span>
+                </div>
+                <div class="answer-section">
+                    <input type="number" id="answer-input" class="answer-input" placeholder="Your answer">
+                    <button id="submit-button" class="answer-button">Check</button>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h2>Your Progress</h2>
+                <div class="history-table-wrapper">
+                    <table class="history-table" id="history-table">
+                        <thead>
+                            <tr>
+                                <th>Problem</th>
+                                <th>Correct</th>
+                                <th>Your Answer</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal" id="completion-modal">
+            <div class="modal-content">
+                <h2 id="modal-title">Challenge Complete!</h2>
+                <p id="modal-message">Great job! You've completed this challenge.</p>
+                <div class="modal-stats">
+                    <div class="modal-stat">
+                        <i class="fas fa-percentage"></i>
+                        <span>Success Rate: <span id="success-rate">0%</span></span>
+                    </div>
+                    <div class="modal-stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Correct: <span id="correct-count">0</span>/10</span>
+                    </div>
+                </div>
+                <button id="continue-button" class="modal-button">Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
