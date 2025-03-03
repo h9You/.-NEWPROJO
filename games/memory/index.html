@@ -5,21 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-
     <div class="wrapper">
         <div class="menu">
-            <h1>Can you memorize them all?</h1>
-            <div class="buttons"><a href="./game.html"><button id="play">Play</button></a>
-                <button id="set">Settings</button>
+            <h1><i class="fas fa-brain"></i> Memory Match</h1>
+            <p class="tagline">Test your memory skills!</p>
+
+            <div class="main-menu" id="main-menu">
+                <button id="play-btn" class="menu-btn">
+                    <i class="fas fa-play"></i> Play Game
+                </button>
+                <button id="settings-btn" class="menu-btn">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+
+
             </div>
+
+            <div class="difficulty-menu" id="difficulty-menu" style="display: none;">
+                <h2>Select Difficulty</h2>
+                <button id="easy-btn" class="difficulty-btn">
+                    <i class="fas fa-smile"></i> Easy
+                    <span class="difficulty-info">3×4 Grid (6 Pairs)</span>
+                </button>
+                <button id="medium-btn" class="difficulty-btn">
+                    <i class="fas fa-meh"></i> Medium
+                    <span class="difficulty-info">4×4 Grid (8 Pairs)</span>
+                </button>
+                <button id="hard-btn" class="difficulty-btn">
+                    <i class="fas fa-dizzy"></i> Hard
+                    <span class="difficulty-info">4×5 Grid (10 Pairs)</span>
+                </button>
+                <button id="back-from-difficulty" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+            <div class="settings-menu" id="settings-menu" style="display: none;">
+                <h2>Settings</h2>
+                <button id="back-from-settings" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+
+
+
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

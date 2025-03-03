@@ -1,41 +1,242 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.wrapper{
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f1f1f1;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.menu{
+.menu {
+    display: flex;
     flex-direction: column;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-h1{
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-#play, #set{
-    border: none;
-    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
     border-radius: 15px;
-    margin: 10px 10px;
-    cursor: pointer;
-    background-color: rgb(86, 143, 1);
-    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.menu h1 {
+    color: #6a11cb;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu h1 i {
+    margin-right: 10px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-menu,
+.difficulty-menu,
+.settings-menu,
+.high-scores-menu,
+.how-to-play-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-btn,
+.difficulty-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6a11cb;
+    color: white;
     font-size: 18px;
     font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-btn i,
+.difficulty-btn i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.menu-btn:hover,
+.difficulty-btn:hover {
+    background-color: #5910a8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-btn:active,
+.difficulty-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.difficulty-btn {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.difficulty-info {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+#easy-btn {
+    background-color: #28a745;
+}
+
+#easy-btn:hover {
+    background-color: #218838;
+}
+
+#medium-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+#medium-btn:hover {
+    background-color: #e0a800;
+}
+
+#hard-btn {
+    background-color: #dc3545;
+}
+
+#hard-btn:hover {
+    background-color: #c82333;
+}
+
+.back-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #6a11cb;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* How to Play */
+.instructions {
+    margin-bottom: 20px;
+}
+
+.instructions p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.instructions i {
+    color: #28a745;
+    margin-right: 8px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .menu {
+        padding: 20px;
+    }
+    
+    .menu h1 {
+        font-size: 28px;
+    }
+    
+    .tagline {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .menu-btn, 
+    .difficulty-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .menu-btn i, 
+    .difficulty-btn i {
+        font-size: 18px;
+    }
+    
+    .difficulty-info {
+        font-size: 12px;
+    }
+}
+
+/* Animation for menu transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-menu,
+.difficulty-menu,
+.settings-menu,
+.high-scores-menu,
+.how-to-play-menu {
+    animation: fadeIn 0.3s ease-out;
 }
