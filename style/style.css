@@ -4,166 +4,10 @@
     box-sizing: border-box;
 }
 
-
 @font-face {
     font-family: 'GreatVibes';
     src: url('../projectspreview/fonts/GreatVibes-Regular.ttf') format('truetype');
 }
-
-
-
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-.hamburger a {
-    text-decoration: none;
-    color: #000000;
-}
-
-@media (max-width: 768px) {
-
-    .width {
-        width: 100% !important;
-    }
-
-    .links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 50px;
-        width: 100%;
-        background-color: #ffffff;
-    }
-
-    .links a {
-        flex-wrap: nowrap;
-        border-bottom: 1px solid #444;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .links.active {
-        display: flex;
-    }
-
-    #projectnameContainer h1 {
-        font-size: 3rem !important;
-        line-height: 1.5 !important;
-    }
-
-
-    #projectnameContainer p,
-    .logo {
-        font-size: 1.2rem !important;
-        color: #3A3A3A;
-    }
-
-    .buttons a {
-        margin-top: 10px !important;
-        padding: 5px 15px !important;
-        font-size: 1rem !important;
-    }
-
-    .iconsbox div {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 7rem !important;
-    }
-
-    .iconsbox img {
-        height: 3.5rem !important;
-    }
-
-    .iconsbox .icon-item {
-        flex-direction: column;
-    }
-
-    .iconsbox p {
-        margin-top: -6rem;
-        font: normal normal 500 0.85rem Heebo !important;
-        color: #2C2C2C;
-    }
-
-    .card-body {
-        width: 20rem !important;
-        height: 32rem !important;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        box-shadow: 3px 3px 15px #00000029;
-        border-radius: 10px;
-        background-color: white;
-    }
-
-    .card-body .card-img {
-        width: 20rem !important;
-    }
-
-    .formbox {
-        direction: rtl;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 80% !important;
-    }
-
-    .inputs {
-        width: 100% !important;
-    }
-
-    .submit {
-        width: 100% !important;
-    }
-}
-
-@media (max-width:480px) {
-
-    #projectnameContainer>.width>h1 {
-        font-size: 1.8rem !important;
-    }
-
-    #formCon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .formbox {
-        width: 100% !important;
-    }
-
-    .card-body {
-        width: 92% !important;
-    }
-
-    .card-body .card-img {
-        width: 100% !important;
-    }
-
-    #container h2 {
-        font-size: 1.2rem !important;
-    }
-
-    #container p {
-        font-size: 0.85rem !important;
-    }
-
-    .card-body button {
-        width: 90% !important;
-    }
-
-}
-
-
 
 .navbar {
     position: sticky;
@@ -194,7 +38,6 @@
     justify-content: center;
     align-items: center;
     gap: 8%;
-
 }
 
 .links a {
@@ -211,6 +54,21 @@
 .links a:not(:hover) {
     transform: scale(1);
     transition: 0.34s;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #000000;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger a {
+    text-decoration: none;
+    color: #000000;
 }
 
 .width {
@@ -239,7 +97,6 @@
     font: normal normal 600 20px/30px Heebo;
     color: #3A3A3A;
 }
-
 
 .iconsrow {
     display: flex;
@@ -299,7 +156,6 @@
     font: normal normal 600 0.9rem Heebo;
     color: #2C2C2C;
 }
-
 
 #container button:hover {
     transform: scale(1.2);
@@ -381,7 +237,6 @@
     color: #2C2C2C;
 }
 
-
 .card-body:hover {
     transform: scale(1.08);
     transition: 0.4s;
@@ -439,7 +294,6 @@
     color: #2C2C2C;
 }
 
-
 #row1 {
     margin-left: 7rem;
 }
@@ -494,7 +348,6 @@
     padding-right: 8px;
 }
 
-
 .submit {
     background: #ff4050 0% 0% no-repeat padding-box;
     border-radius: 25px;
@@ -544,6 +397,176 @@
     font: thin normal 300 20px/29px sans-serif;
     width: 50%;
     padding-right: 0.5%;
+}
+
+#containerCardsGames {
+    background: #f0d6d6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10rem;
+    padding-top: 7rem;
+}
+
+#containerCardsGames .card-body button {
+    background: #ff4050;
+    color: white;
+}
+
+#containerCardsGames .card-body button:hover {
+    transform: scale(1.15);
+    border: 2px solid #ff4050;
+    background-color: #F6F6F6;
+    color: #2C2C2C;
+    transition: 0.3s;
+}
+
+#containerCardsGames .card-body {
+    border-left: 3px solid #ff4050;
+    border-bottom: 3px solid #ff4050;
+}
+
+#containerCardsGames h2 {
+    color: #ff4050;
+}
+
+@media (max-width: 768px) {
+    .width {
+        width: 100% !important;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 77px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .links a {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        text-align: right;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .links.active {
+        display: flex;
+    }
+
+    #projectnameContainer h1 {
+        font-size: 3rem !important;
+        line-height: 1.5 !important;
+    }
+
+    #projectnameContainer p,
+    .logo {
+        font-size: 1.2rem !important;
+        color: #3A3A3A;
+    }
+
+    .buttons a {
+        margin-top: 10px !important;
+        padding: 5px 15px !important;
+        font-size: 1rem !important;
+    }
+
+    .iconsbox div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7rem !important;
+    }
+
+    .iconsbox img {
+        height: 3.5rem !important;
+    }
+
+    .iconsbox .icon-item {
+        flex-direction: column;
+    }
+
+    .iconsbox p {
+        margin-top: -6rem;
+        font: normal normal 500 0.85rem Heebo !important;
+        color: #2C2C2C;
+    }
+
+    .card-body {
+        width: 20rem !important;
+        height: 32rem !important;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 3px 3px 15px #00000029;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .card-body .card-img {
+        width: 20rem !important;
+    }
+
+    .formbox {
+        direction: rtl;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80% !important;
+    }
+
+    .inputs {
+        width: 100% !important;
+    }
+
+    .submit {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:480px) {
+    #projectnameContainer>.width>h1 {
+        font-size: 1.8rem !important;
+    }
+
+    #formCon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formbox {
+        width: 100% !important;
+    }
+
+    .card-body {
+        width: 92% !important;
+    }
+
+    .card-body .card-img {
+        width: 100% !important;
+    }
+
+    #container h2 {
+        font-size: 1.2rem !important;
+    }
+
+    #container p {
+        font-size: 0.85rem !important;
+    }
+
+    .card-body button {
+        width: 90% !important;
+    }
 }
 
 @media (max-width:1280px) {

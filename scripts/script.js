@@ -1,8 +1,8 @@
-function myFunction() {
-    var x = document.getElementById("nav-links");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    
+    hamburger.addEventListener('click', () => {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    });
+});

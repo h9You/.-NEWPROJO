@@ -86,6 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
             timerDisplay.innerText = `Time: ${time}s`;
         }, 1000);
     };
+
+    function flipCard() {
+        if (lockBoard || this === firstCard) return;
+        
+        this.classList.add("flipped");
+        
+        if (!firstCard) {
+            firstCard = this;
+            return;
+        }
+        
+        secondCard = this;
+        lockBoard = true;
+        
+        checkForMatch();
+    }
     
     shuffledImages.forEach((emoji) => {
         const card = document.createElement("div");
@@ -104,21 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         grid.appendChild(card);
         cards.push(card);
         
-        card.addEventListener("click", () => {
-            if (lockBoard || this === firstCard) return;
-            
-            this.classList.add("flipped");
-            
-            if (!firstCard) {
-                firstCard = this;
-                return;
-            }
-            
-            secondCard = this;
-            lockBoard = true;
-            
-            checkForMatch();
-        });
+        card.addEventListener("click", flipCard);
     });
     
     const checkForMatch = () => {
